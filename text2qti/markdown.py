@@ -503,7 +503,7 @@ class Markdown(object):
         '''
         return self.skip_or_html_comment_or_code_math_siunitx_re.sub(self._html_comment_or_inline_code_math_siunitx_dispatch, string)
 
-    def md_to_html_xml(self, markdown_string: str, strip_p_tags: bool=False) -> str:
+    def md_to_html_xml(self, markdown_string: str, strip_p_tags: bool=True) -> str:
         '''
         Convert the Markdown in a string to HTML, then escape the HTML for
         embedding in XML.
